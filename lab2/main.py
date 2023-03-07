@@ -7,7 +7,7 @@ def my_printf(format_string,param):
     shouldDo=True
     for idx in range(0,len(format_string)):
         if shouldDo:
-            if format_string[idx] == '#' and format_string[idx+1] == '.':
+            if format_string[idx] == '#' and format_string[idx+1] == '.' and format_string[idx+2].isdigit():
                 num = 1
                 number = ''
                 while format_string[idx+1+num].isdigit():
@@ -19,7 +19,8 @@ def my_printf(format_string,param):
             else:
                 print(format_string[idx],end="")
         else:
-            shouldDo=True
+             if format_string[idx] == 'k':
+                shouldDo=True
     print("")
 
 data=sys.stdin.readlines()
