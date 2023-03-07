@@ -16,6 +16,8 @@ def my_printf(format_string,param):
                 if format_string[idx+1+num] == 'k':
                     print(param[:int(number)].swapcase(),end="")
                     shouldDo=False
+                else:
+                    print("#",end="")
             else:
                 print(format_string[idx],end="")
         else:
