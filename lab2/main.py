@@ -13,7 +13,8 @@ def my_printf(format_string,param):
                 while format_string[idx+1+num].isdigit():
                     number=+format_string[idx+1+num]
                     num+=1
-                    
+                if format_string[idx+1+num] == 'k':
+                
                 shouldDo=False
             else:
                 print(format_string[idx],end="")
