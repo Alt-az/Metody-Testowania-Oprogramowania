@@ -15,7 +15,7 @@ def my_printf(format_string,param):
                     num+=1
                 if format_string[idx+1+num] == 'k':
                     print(param[:int(number)],end="")
-                shouldDo=False
+                    shouldDo=False
             else:
                 print(format_string[idx],end="")
         else:
